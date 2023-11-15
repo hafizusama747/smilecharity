@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>Help Israel</title>
+<%- include('./partials/head'); %>
+ 
+<style>
+  .section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #ebf4fa;
+}
+/* Blog 
+---------------------*/
+.blog-grid {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.blog-grid .blog-img {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.blog-grid .blog-img .date {
+  position: absolute;
+  background: #3a3973;
+  color: #ffffff;
+  padding: 8px 15px;
+  left: 0;
+  top: 10px;
+  font-size: 14px;
+}
+.blog-grid .blog-info {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 20px;
+  margin: -30px 20px 0;
+  position: relative;
+}
+.blog-grid .blog-info h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+.blog-grid .blog-info h5 a {
+  color: #3a3973;
+}
+.blog-grid .blog-info p {
+  margin: 0;
+}
+.blog-grid .blog-info .btn-bar {
+  margin-top: 20px;
+}
+
+.px-btn-arrow {
+    padding: 0 50px 0 0;
+    line-height: 20px;
+    position: relative;
+    display: inline-block;
+    color: #fe4f6c;
+    -moz-transition: ease all 0.3s;
+    -o-transition: ease all 0.3s;
+    -webkit-transition: ease all 0.3s;
+    transition: ease all 0.3s;
+}
+
+
+.px-btn-arrow .arrow {
+    width: 13px;
+    height: 2px;
+    background: currentColor;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 25px;
+    -moz-transition: ease right 0.3s;
+    -o-transition: ease right 0.3s;
+    -webkit-transition: ease right 0.3s;
+    transition: ease right 0.3s;
+}
+
+.px-btn-arrow .arrow:after {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    display: inline-block;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  .customcard {
+    border:none;
+    padding: 10px 50px;
+  }
+  .customcard::after {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .customcard:hover {
+    transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    backface-visibility: hidden; 
+    will-change: transform;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.75) !important;
+  }
+  .customcard:hover::after {
+    opacity: 1;
+  }
+  .customcard:hover .btn-outline-primary{
+    color:white;
+    background:#007bff;
+  }
+  .full-size-bg {
+    background-image: url('/images/o5.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  .text-bottom-left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+</style>
+</head>
+<body class="container-fluid">
+
+<header>
+  <%- include('./partials/header'); %>
+
+</header>
+
+
+<main>
+  
+<div class="jumbotron">
+    
+  <section class="full-size-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="text-bottom-left text-light">
+            <h2>WAR IN ISRAEL</h2>
+            <p>FAMILIES NEED YOUR SUPPORT</p>
+            <a href="<%= process.env.BASE_URL %>/donation" class="btn btn-light">Donate Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <div class="card ">
+      <br>
+      <div class="content d-flex align-items-center justify-content-center">
+        
+      </div>
+      <div class="container-fluid ">
+      
+        <div class="card-body">
+          <b   class="content d-flex align-items-center justify-content-center" ><i class="fa fa-clipboard text-danger" aria-hidden="true"><nbsp></nbsp> <b class="fs-5 text-danger">Appeal </b> </i>  </b> 
+          <h1 class="content d-flex align-items-center justify-content-center text-danger" >Devastating airstrikes in Israel</h1><h1 class="text-success"></h1>
+          <p class="title content d-flex align-items-center justify-content-center text-dark">We are on the ground working for the needy children and families</p>
+          
+          <div class="actions ">
+            <div class="d-flex justify-content-center">
+              <a href="<%= process.env.BASE_URL %>/donation"> <button type="button" style="border-radius:30px"class="btn  btn-outline-success btn-sm px-3 me-2 fw-semibold" >
+                Donate now
+              </button></a>
+                           
+            </div>
+            <br>
+          </div>  
+        </div>
+        <br>
+      </div>                                  
+    </div>     
+    
+    <div class="card">
+      <div class="card-body">
+        <div class="container marketing">
+
+          <!-- START THE FEATURETTES -->
+      
+          <div class="row featurette">
+            <div class="col-md-7 "style="margin-top:70px;">
+              <h1 class="featurette-heading fw-normal lh-1 text-primary">The impact has been almost unimaginable.</h1>
+              <p class="lead">City blocks have been almost entirely wiped out,some cities are now barely recognisable. With over               <span class="text-danger">8500 buildings destroyed</span>
+              , rescuers were still pulling bodies out of rubble weeks later. Ongoing water and gas cuts make it hard for people to keep warm as temperatures drop below zero during the night. People sheltering in cars and open spaces are at risk from hypothermia.
+</p>
+            </div>
+            <div class="col-md-5">
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="/images/t1.jpeg" alt="">
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2 "style="margin-top:70px;">
+              <h1 class="featurette-heading fw-normal lh-1 text-primary">
+                Israel-War: Emergency Situation Report.</span></h1>
+              <p class="lead">The United Nations has said at least  <span class="text-danger">0.5 million people</span> have been made homeless in southern Israel, with more than <span class="text-danger">50000 homes</span> needing to be rebuilt.
+
+                Nearly <span class="text-danger"> 1000 airstrikes</span> have been reported since September 6.
+                
+                Last week, Israel said about <span class="text-danger">865,000 people</span> were living in  <span class="text-danger">scared</span>  situation <span class="text-danger">376,000</span> suffered trauma from the airstrikes and ongoing war</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="/images/t2.jpeg" alt="">
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 "style="margin-top:70px;">
+              <h1 class="featurette-heading fw-normal lh-1 text-primary">The most powerful airstrikes that hit the Israel ever</span></h1>
+              <p class="lead">In Oct, a magnitude <span class="text-danger">10000</span> tons of airstikes blasts occurred in Israel. This was followed by more incoming attacks at the Israel </p>
+            </div>
+            <div class="col-md-5">
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="/images/t3.jpg" alt="">
+            </div>
+          </div>
+        
+      
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="blog">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-7 text-center">
+                  <div class="section-title">
+                      <h2>Latest News</h2>
+                      <p>latest events and news about the Israel on the ongoing war beween Hamas and Israel</p>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-4">
+                  <div class="blog-grid">
+                      <div class="blog-img">
+                          <div class="date">05 SEP</div>
+                          <a href="<%= process.env.BASE_URL %>/news/post6">
+                              <img src="/images/news5.png" height="275px" title="" alt="">
+                          </a>
+                      </div>
+                      <div class="blog-info">
+                          <h5><a href="<%= process.env.BASE_URL %>/news/post6">Hamas' attacks on Israel also aimed at Palestinian Authority</a></h5>
+                          <p>Hamas fires rockets at Israel and started the war.</p>
+                          <div class="btn-bar">
+                              <a href="<%= process.env.BASE_URL %>/news/post6" class="px-btn-arrow">
+                                  <span>Read More</span>
+                                  <i class="arrow"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <div class="blog-grid">
+                      <div class="blog-img">
+                          <div class="date">03 SEP</div>
+                          <a href="<%= process.env.BASE_URL %>/news/post8">
+                            <img src="/images/news7.png" height="275px" title="" alt="">
+                          </a>
+                      </div>
+                      <div class="blog-info">
+                          <h5><a href="<%= process.env.BASE_URL %>/news/post8">News of the attack quickly spread on social media</a></h5>
+                          <p>U.S. recognizes as a terrorist organization, launched a surprise attack from Gaza.</p>
+                          <div class="btn-bar">
+                              <a href="<%= process.env.BASE_URL %>/news/post8" class="px-btn-arrow">
+                                  <span>Read More</span>
+                                  <i class="arrow"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <div class="blog-grid">
+                      <div class="blog-img">
+                          <div class="date">04 FEB</div>
+                          <a href="<%= process.env.BASE_URL %>/news/post7">
+                            <img src="/images/news8.png" height="275px" title="" alt="">
+                          </a>
+                      </div>
+                      <div class="blog-info">
+                          <h5><a href="<%= process.env.BASE_URL %>/news/post7">Israel says 1,300 of its citizens have died</a></h5>
+                          <p>The total figure is 120 more deaths than the ministry reported on Thursday afternoon.</p>
+                          <div class="btn-bar">
+                              <a href="<%= process.env.BASE_URL %>/news/post7" class="px-btn-arrow">
+                                  <span>Read More</span>
+                                  <i class="arrow"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    
+    <div class="card text-center">
+    
+      <div class="card-body ">
+    
+        <h5 class="card-title text-primary">Current situation</h5>
+        <p class="card-text">People are facing many challenges in the informal settlements, scared of war and losing thier houses and loved ones have taken the meaning of life from them.</p>
+        <div class="row mt-4 ">
+
+
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom " >
+                  <img src="/images/news4.jpg" height="195px" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">World reacts to Hamas attack on Israel</h5>
+                    <p class="card-text">
+                      "There is never any justification for terrorism. We stand in solidarity with the government and people of Israel, and extend our condolences for the Israeli lives lost in these attacks," U.S. Secretary of State Antony Blinken said in a statement released by the State Department.
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post1"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom " >
+                  <img src="/images/news2.jpeg" height="195px"class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">Why did Hamas launch a surprise attack on Israel?</h5>
+                    <p class="card-text">
+                      The Israeli Defence Forces (IDF) said Gaza, the tiny Palestinian enclave on the Mediterranean coast that has been under Israeli and Egyptian blockade for over 16 years, was in a state of “stable instability”. Yet, on Saturday morning, Israel witnessed the largest attack from the enclave.
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post2"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom ">
+                  <img src="/images/news1.jpg" height="195px"class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">Attack on Israel is calculated and ruthless — and that’s Hamas</h5>
+                    <p class="card-text">
+                      The biggest surprise in Hamas’s massive attack on Israel is that it was a surprise. The operation was of unprecedented scale, involving thousands of personnel and pieces of equipment, from hang gliders to bulldozers and rockets. Such an effort demands weeks of preparation.
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post3"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom " >
+                  <img src="/images/news3.jpg"height="195px" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">Unprecedented Hamas attack on Israel has caused crisis - and there are days of war ahead</h5>
+                    <p class="card-text">This isn't the usual round of violence - it's far more serious than that. Hamas must have had significant assistance within Israel itself to carry this attack out, and most likely help from Iran and Hezbollah. Its just not a usual violance
+
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post4"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+           
+          
+          
+          
+ 
+        </div>
+        <br>
+        <a href="<%= process.env.BASE_URL %>/newsposts"> <button type="button" style="border-radius:30px"class="btn btn-secondary btn-sm px-3 me-2 fw-semibold" >
+          Browse more
+        </button></a>
+       
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+
+      
+    </div>
+    
+    
+   
+</div>
+
+
+    
+
+ 
+</main>
+
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+
+
+</html>

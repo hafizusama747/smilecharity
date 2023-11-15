@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title><%=title%></title>
+<%- include('./partials/head'); %>
+<style>
+  .customcard {
+    border:none;
+    padding: 10px 50px;
+  }
+  .customcard::after {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .customcard:hover {
+    transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    backface-visibility: hidden; 
+    will-change: transform;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.75) !important;
+  }
+  .customcard:hover::after {
+    opacity: 1;
+  }
+  .customcard:hover .btn-outline-primary{
+    color:white;
+    background:#007bff;
+  }
+
+  .spendenteaser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .spendenteaser__teaserText {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .spendenteaser__link {
+    background-color: white;
+  }
+
+
+</style>
+</head>
+<body class="container-fluid">
+
+<header>
+  <%- include('./partials/header'); %>
+
+</header>
+
+
+<main>
+  
+<div class="jumbotron">
+    
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <a href="#"><img src="/images/slide1.png" width="475" height="650" class="d-block w-100" alt="..." >
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/slide2.png"  width="475" height="650" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <br>
+            <br>
+            <h5></h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/slide3.png" width="475" height="650" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+           <a href="#"></a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>      
+    </div>
+
+<div class="card">
+  <div class="card-body">
+    <div class="card text-center">
+              
+      <div class="card-body ">
+        <hr class="my-4">
+        <h4 class="card-title text-danger ">Conflict, food shortages, and, other crises have left a record 33 million people in critical need due to war in Israel.</h4>
+        <hr class="my-4">
+        <p class="card-text">An urgent need for funding has arisen to address critical issues plaguing communities, particularly those suffering from illnesses, malnutrition, and inadequate access to medical services. The situation demands immediate attention as countless lives are at stake. Insufficient resources have left many individuals vulnerable to debilitating diseases, exacerbating their suffering and jeopardizing their chances of survival. Moreover, war continues to afflict a significant portion of the population, leading to weakened immune systems and heightened susceptibility to various health conditions due to dnagerous gases that emerge in air after the use of these lethal weapons in the war. Without intervention, the cycle of illness and malnutrition perpetuates, resulting in a devastating toll on communities' overall well-being.</p>
+        
+       
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-body">
+    <div class="spendenteaser bg-success text-white p-3">
+      <i class="fa fa-heart fa-3x spendenteaser__heart text-green"></i>
+
+      <div class="spendenteaser__teaserText">
+        <p class="mt-1" style="font-size: 24px; margin-bottom: 10px;">Help the people affected by the disasters of the war with your donation</p>
+      </div>
+      <a href="<%= process.env.BASE_URL %>/donation" title="Donate now!" target="_top" class="btn btn-lg btn-success text-success spendenteaser__link">Donate now</a>
+    </div>
+
+
+  </div>
+</div>
+ 
+
+
+<div class="card">
+  <div class="card-body">
+    <div class="container-fluid ">
+      
+      <div class="card card-body">
+        <div class="row"> 
+          <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="p-3">
+                  <img src="/images/deaths v1.jpeg" style="width: 70%;height: 70%;" alt="Total Deaths">
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-6">
+              <div>
+                  <strong class="text-danger count" style="font-size:40px;">1396
+                  </strong>
+                  <h5>Deaths</h5>
+              </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              <div class="p-3">
+                  <img src="/images/injured v1.jpeg" style="width: 70%;height: 70%;" alt="Total Injured">
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+             
+                  <strong class="text-danger count" style="font-size:40px;">12728              </strong>
+                  <h5>Injured</h5>
+            
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              <div class="p-3">
+                  <img src="/images/live stokc lost v1.jpeg" style="width: 70%;height: 70%;" alt="Total Livestock Lost">
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              
+                  <strong class="text-danger count" style="font-size:40px;">75023</strong>
+                  <h5>Livestock Lost</h5>
+             
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              <div class="p-3">
+                  <img src="/images/houses damaged v1.jpeg" style="width: 70%;height: 70%;" alt="Total Fully Damaged">
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+             
+                  <strong class="text-danger count" style="font-size:40px;">8970</strong>
+                  <h5>Fully Damaged</h5>
+            
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              <div class="p-3">
+                  <img src="/images/house v1.jpeg" style="width: 70%;height: 70%;" alt="Total Partially Damaged">
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              
+                  <strong class="text-danger count" style="font-size:40px;">13911</strong>
+                  <h5>Partially Damaged</h5>
+              
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              <div class="p-3">
+                  <img src="/images/houses damaged v1.jpeg " style="width: 70%;height: 70%;" alt="Total Houses Damaged">
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12">
+              
+                  <strong class="text-danger count" style="font-size:40px;">22881</strong>
+                  <h5>Total Houses Damaged</h5>
+             
+          </div>
+        </div>
+        <div class="card text-center">
+          
+          <div class="card-body ">
+            <hr class="my-4">
+            <h4 class="card-title text-dark">In war, children suffer first, and most.</h4>
+            <hr class="my-4">
+            <p class="card-text">When a sudden onset war strikes, it's children who suffer first and suffer most. As well as the immediate, devastating impacts – loss of life, destruction of homes and communities – the chaos of an emergency can threaten access to food, shelter and social support. Children and mothers are often cut off from basic and essential care, including life-saving medicines and supplies. The risk of malnutrition soars. Shattered infrastructure means families can lose access to adequate sanitation and hygiene facilities, leaving children even more susceptible to waterborne diseases. The destruction of schools means children can lose safety and routine. Without access to education, they risk losing their futures.</p>
+            
+           
+           
+          </div>
+        
+        </div>
+          <br>
+        </div>  
+    </div>
+    <br>
+    </div>
+<div class="card-title">
+  <h4 class="card-header text-primary text-center">Campaigns for the change</h4>
+
+</div>
+   
+    <div class="">
+      <div class="">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 col-md-12 mt-2">
+            <div class="card">
+              <img class="card-img-top" src="images/dc.png"height="280px" alt="Flood Donation">
+              <div class="card-body">
+                <h5 class="card-title">Donation for children</h5>
+                <p class="card-text">Support those children affected by war with your generous donations.</p>
+                <a href="<%= process.env.BASE_URL %>/donate" style="display: flex; justify-content: center; align-items: center; margin: 0;" class="btn btn-success">Donate</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-sm-12 col-md-12 mt-2 mb-3">
+            <div class="card">
+              <img class="card-img-top" src="images/md.png" height="280px" alt="Earthquake Donation">
+              <div class="card-body">
+                <h5 class="card-title">Donation for medications</h5>
+                <p class="card-text">Help the victims of war by contributing to the relief efforts with us.</p>
+                <a href="<%= process.env.BASE_URL %>/donate" style="display: flex; justify-content: center; align-items: center; margin: 0;" class="btn btn-success">Donate</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-sm-12 col-md-12 mt-2">
+            <div class="card">
+              <img class="card-img-top" src="images/dm.png"  height="280px"alt="Dessert Water Donation">
+              <div class="card-body">
+                <h5 class="card-title">Donation for the military</h5>
+                <p class="card-text">Donate us to help provide the food and other rescources to the military.</p>
+                <a href="<%= process.env.BASE_URL %>/donate" style="display: flex; justify-content: center; align-items: center; margin: 0;" class="btn btn-success">Donate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+    <div class="card text-center">
+    
+      <div class="card-body ">
+    
+        <h5 class="card-title text-primary">Current situation</h5>
+        <p class="card-text">People are facing many challenges in the informal settlements, scared of war and losing thier houses and loved ones have taken the meaning of life from them.</p>
+        <div class="row mt-4 ">
+
+
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom " >
+                  <img src="/images/news4.jpg" height="195px" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">World reacts to Hamas attack on Israel</h5>
+                    <p class="card-text">
+                      "There is never any justification for terrorism. We stand in solidarity with the government and people of Israel, and extend our condolences for the Israeli lives lost in these attacks," U.S. Secretary of State Antony Blinken said in a statement released by the State Department.
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post1"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom " >
+                  <img src="/images/news2.jpeg" height="195px"class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">Why did Hamas launch a surprise attack on Israel?</h5>
+                    <p class="card-text">
+                      The Israeli Defence Forces (IDF) said Gaza, the tiny Palestinian enclave on the Mediterranean coast that has been under Israeli and Egyptian blockade for over 16 years, was in a state of “stable instability”. Yet, on Saturday morning, Israel witnessed the largest attack from the enclave.
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post2"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom ">
+                  <img src="/images/news1.jpg" height="195px"class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">Attack on Israel is calculated and ruthless — and that’s Hamas</h5>
+                    <p class="card-text">
+                      The biggest surprise in Hamas’s massive attack on Israel is that it was a surprise. The operation was of unprecedented scale, involving thousands of personnel and pieces of equipment, from hang gliders to bulldozers and rockets. Such an effort demands weeks if not months of preparation.
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post3"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="">
+                <div class="card img-hover-zoom--quick-zoom " >
+                  <img src="/images/news3.jpg"height="195px" class="card-img-top " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">Unprecedented Hamas attack on Israel has caused crisis - and there are days of war ahead</h5>
+                    <p class="card-text">This isn't the usual round of violence - it's far more serious than that. Hamas must have had significant assistance within Israel itself to carry this attack out, and most likely help from Iran and Hezbollah. Its just not a usual violance
+
+                    </p>
+                    <a href="<%= process.env.BASE_URL %>/news/post4"> <button type="button" style="border-radius:30px"class="btn  btn-outline-secondary btn-sm px-3 me-2 fw-semibold" >
+                      Read news
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+           
+          
+          
+          
+ 
+        </div>
+        <br>
+        <a href="<%= process.env.BASE_URL %>/newsposts"> <button type="button" style="border-radius:30px"class="btn btn-secondary btn-sm px-3 me-2 fw-semibold" >
+          Browse more
+        </button></a>
+       
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+
+      
+    </div>
+    
+    
+   
+</div>
+
+
+    
+
+ 
+</main>
+
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+
+
+</html>
